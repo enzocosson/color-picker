@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Color Picker</h1>
+        </header>
+       <div class="content">
+        <div class="cards__colors">
+            <div class="settings">
+                <div class="palette">
+                    <h2>sélectionnez une couleur</h2>
+                    <div class="container_choice_colors">
+                    </div>
+                    <button class="tout_supprimer" type="button">Tout Supprimer</button>
+                </div>
+                <div class="ajouter_couleur">
+                    <h2>Ajoutez une couleur</h2>
+                    <input class="input_palette" type="color" value="#ffffff" onchange="updateInputAdd(this.value)">
+                    <input class="input_add" type="text" placeholder="#ffffff">
+                    <button class="btn_add">Ajouter</button>
+                  </div>
+                  
+                  <script>
+                    function updateInputAdd(value) {
+                      document.querySelector('.input_add').value = value;
+                    }
+                  </script>
+            </div>
+            <div class="affichage_couleur">
+                <h3 class="hexadecimal">
+                  #
+                </h3>
+              </div>
+              
+        </div>
+       </div>
+    </main>
+</body>
+<script src="app.js"></script>
+</html>
